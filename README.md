@@ -150,7 +150,7 @@ OPENAI_API_KEY=your_real_openai_key
 
 ### Download Dataset
 Get your token from https://www.kaggle.com/settings → API → Create New Token
-# Then run:
+### Then run:
 ```bash
 echo '{"username":"YOUR_KAGGLE_USERNAME","key":"YOUR_KAGGLE_KEY"}' > ~/.kaggle/kaggle.json
 chmod 600 ~/.kaggle/kaggle.json
