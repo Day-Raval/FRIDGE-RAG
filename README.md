@@ -62,30 +62,21 @@ This repository provides a clean, production-oriented scaffold with API, dashboa
 
 ## 🧠 System Architecture
 
-```text
-[Fridge Image]
-     │
-     ▼
-[Vision Ensemble: YOLOv8 + DETR + CLIP]
-     │
-     ▼
-[Detected Ingredients]
-     │
-     ▼
-[Embedding Model: all-MiniLM-L6-v2]
-     │
-     ▼
-[ChromaDB Recipe Index]
-     │
-     ▼
-[Top-K Candidate Recipes]
-     │
-     ▼
-[LLM Re-ranker / Explainer]
-     │
-     ▼
-[Final Recommended Recipes]
+A simplified end-to-end flow of how FRIDGE-RAG works at inference time:
+
+```mermaid
+flowchart TD
+    A[📷 Fridge Image] --> B[🧪 Vision Ensemble
+YOLOv8 + DETR + CLIP]
+    B --> C[🥕 Detected Ingredients]
+    C --> D[🔎 Recipe Retrieval
+Embeddings + ChromaDB]
+    D --> E[📚 Top-K Candidate Recipes]
+    E --> F[🤖 LLM Re-ranker / Explainer]
+    F --> G[🍽️ Final Recipe Suggestions]
 ```
+
+> This is the **functional pipeline view**. For deployable infra components (queue, cache, gateway, workers, observability), see the Production-Grade Architecture section below.
 
 ---
 
