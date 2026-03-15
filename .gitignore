@@ -7,3 +7,4 @@ __pycache__/
 *.pth
 *.onnx
 .DS_Store
+.kaggle/
