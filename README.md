@@ -44,6 +44,8 @@ Most demos stop at “object detection.” This project is built like a small pr
 
 ## End-to-end architecture
 
+![FRIDGE-RAG workflow overview](docs/images/workflow-overview.svg)
+
 ### Online inference flow
 
 ```text
@@ -90,6 +92,9 @@ FRIDGE-RAG/
 ├── requirements.txt
 ├── .env.example
 ├── Sample-image.jpg
+├── docs/
+│   └── images/
+│       └── workflow-overview.svg  # workflow diagram image used in README
 ├── api/
 │   ├── __init__.py
 │   ├── main.py                 # FastAPI app (/health, /recommend)
@@ -263,9 +268,6 @@ curl -X POST http://localhost:8000/recommend \
   -F "top_n=5"
 ```
 
-You can use the bundled sample image in the curl command above (`Sample-image.jpg`):
-
-![API sample request image](Sample-image.jpg)
 
 ---
 
