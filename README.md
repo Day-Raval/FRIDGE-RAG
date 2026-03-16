@@ -28,6 +28,8 @@ To keep this README aligned with the latest commits and additions:
 
 Sample fridge image used for end-to-end testing:
 
+
+
 ![Sample fridge image used by FRIDGE-RAG](Sample-image.jpg)
 
 
