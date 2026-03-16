@@ -1,13 +1,15 @@
 import json
-import pytest # type: ignore
-from unittest.mock import patch
+import pytest
+from unittest.mock import patch, MagicMock
+import numpy as np
 
 
 def test_retriever_builds_correct_query():
     with patch("src.rag.retriever.embedder") as mock_embedder, \
          patch("src.rag.retriever._get_collection") as mock_col:
 
-        mock_embedder.encode.return_value = [0.1] * 384
+        # Fix: return numpy array so .tolist() works
+        mock_embedder.encode.return_value = np.array([0.1] * 384)
         mock_col.return_value.query.return_value = {
             "documents": [["doc1"]],
             "metadatas": [[{
@@ -37,7 +39,8 @@ def test_retriever_applies_calorie_filter():
     with patch("src.rag.retriever.embedder") as mock_embedder, \
          patch("src.rag.retriever._get_collection") as mock_col:
 
-        mock_embedder.encode.return_value = [0.1] * 384
+        # Fix: return numpy array so .tolist() works
+        mock_embedder.encode.return_value = np.array([0.1] * 384)
         mock_col.return_value.query.return_value = {
             "documents": [[]], "metadatas": [[]], "distances": [[]]
         }

@@ -5,6 +5,7 @@ data/recipe_db/
 __pycache__/
 *.pyc
 *.pth
+*.pt
 *.onnx
 .DS_Store
 .kaggle/
