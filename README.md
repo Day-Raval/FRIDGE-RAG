@@ -10,6 +10,27 @@ FRIDGE-RAG is a practical multimodal system that combines:
 
 ---
 
+<p align="left">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-blue" />
+  <img alt="FastAPI" src="https://img.shields.io/badge/API-FastAPI-009688" />
+  <img alt="Streamlit" src="https://img.shields.io/badge/UI-Streamlit-FF4B4B" />
+  <img alt="Vector DB" src="https://img.shields.io/badge/VectorDB-Chroma-6E56CF" />
+</p>
+
+## 🔄 Latest updates snapshot
+
+To keep this README aligned with the latest commits and additions:
+- `.env.example` now clearly documents **offline mode** and when `OPENAI_API_KEY` is required.
+- `USE_LLM_RERANKER=false` is documented as the recommended free/local default for development.
+- Runtime behavior and setup now reflect both **LLM reranking** and **local reranking** paths.
+
+## 📸 Project image context
+
+Sample fridge image used for end-to-end testing:
+
+![Sample fridge image used by FRIDGE-RAG](Sample-image.jpg)
+
+
 ## Why this project is useful
 
 Most demos stop at “object detection.” This project is built like a small production prototype:
@@ -21,6 +42,8 @@ Most demos stop at “object detection.” This project is built like a small pr
 ---
 
 ## End-to-end architecture
+
+![FRIDGE-RAG workflow overview](docs/images/workflow-overview.svg)
 
 ### Online inference flow
 
@@ -68,6 +91,9 @@ FRIDGE-RAG/
 ├── requirements.txt
 ├── .env.example
 ├── Sample-image.jpg
+├── docs/
+│   └── images/
+│       └── workflow-overview.svg  # workflow diagram image used in README
 ├── api/
 │   ├── __init__.py
 │   ├── main.py                 # FastAPI app (/health, /recommend)
@@ -241,6 +267,7 @@ curl -X POST http://localhost:8000/recommend \
   -F "top_n=5"
 ```
 
+
 ---
 
 ## Testing
@@ -289,3 +316,9 @@ If you open PRs, include:
 - testing evidence.
 
 Contributions are welcome.
+
+---
+
+## ✅ README compatibility note
+
+This revamp intentionally **preserves all existing README content** and adds an update layer for recent commits, plus contextual images where applicable.
