@@ -5,7 +5,7 @@
 DishSense is a FRIDGE-RAG multimodal system that combines:
 - **Computer Vision** (YOLOv8 + DETR + CLIP) to detect ingredients from a fridge photo.
 - **RAG retrieval** (Sentence-Transformers + ChromaDB) to fetch relevant recipes.
-- **LLM reranking** (OpenAI GPT-4o-mini) to produce explainable final recommendations.
+- **LLM reranking** (OpenAI GPT-4o-mini + Local-LLM Reranker) to produce explainable final recommendations.
 - **FastAPI + Streamlit** for API-first serving plus a demo UI.
 
 ---
