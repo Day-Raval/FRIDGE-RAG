@@ -324,11 +324,9 @@ pytest tests/test_pipeline.py -v
 2. **Expand the evaluation harness** with dataset slices, baselines, and automated reports.
 3. **Observability**: tracing spans for detection/retrieval/rerank latency.
 4. **Containerization**: Docker + Compose for one-command local startup.
-5. **GPU/CPU profile modes** in config for faster fallback in low-resource envs.
-6. **Allergen & diet taxonomy filters** beyond free-text preference string.
-7. **Robust schema validation** on LLM output with strict typed parsing.
-8. **CI pipeline** with lint/test checks and model-mocking for speed.
-9. **MLflow integration** with experiment tracking/test checks and model-versioning for maintainability.
+5. **Allergen & diet taxonomy filters** beyond free-text preference string.
+6. **CI pipeline** with lint/test checks and model-mocking for speed.
+7. **MLflow integration** with experiment tracking/test checks and model-versioning for maintainability.
 
 ---
 
